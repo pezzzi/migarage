@@ -1,3 +1,5 @@
+/*Header*/
+
 .logoImg{
   width: 80%;
   padding-left: 0;
@@ -8,6 +10,8 @@
   margin-left: 0.1px;
   margin-right: 0.1px;
 }
+
+/*Barra de navegacion*/
 .navBarUl{
   background-color: black;
   list-style: none;
@@ -43,21 +47,16 @@
   color:white;
   overflow:visible;
 }
-/* centered columns styles */
-.row-centered {
-    text-align:center;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    text-align:left;
-    margin-right:-4px;
-    text-align: center;
-}
 
+/*Form del main*/
 .searchFilter{
   text-align: center;
   padding-top: 20%;
+}
+
+select{
+  border-radius: 20%;
+  width: 100%;
 }
 
 footer{
@@ -67,19 +66,16 @@ footer{
   padding-top: 20px;
 }
 
+p{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+/**/
 .main{
   height: 800px;
   background-image: url('../images/bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
-}
-
-select{
-  border-radius: 20%;
-  width: 100%;
-}
-
-p{
-  padding-bottom: 0;
-  margin-bottom: 0;
 }
