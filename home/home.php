@@ -7,6 +7,7 @@
     <title>Mi Garage</title>
   </head>
   <body>
+    <?php include('provincias.php') ?>
     <div class="container-fluid">
       <header>
         <?php include('header.php') ?>
@@ -17,10 +18,11 @@
             <div class="col-5">
               <form class="" action="home.php" method="get">
                 <select class="homeMain" name="provincias">
-                  <option value="bsas">Buenos Aires</option>
-                  <option value="laPampa">La Pampa</option>
-                  <option value="misiones">Misiones</option>
-                  <option value="cordoba">Cordoba</option>
+                  <?php foreach ($provincias as $provincia) {
+                    ?>
+                      <option value="<?php echo $provincia['data'] ?>"><?php echo $provincia['name']; ?></option>
+                  <?php
+                  } ?>
                 </select>
                 <select class="" name="localidades">
                   <option value="laPlata">La Plata
