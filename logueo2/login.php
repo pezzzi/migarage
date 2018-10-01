@@ -12,7 +12,7 @@
   <div class="container">
 
      <div class="row header text-center">
-       <div class="col"> Formulario de Logueo</div>
+       <div class="col"><h2>Ingrese a su cuenta</h2></div>
      </div>
 
      <div class="row">
@@ -38,7 +38,7 @@
                 <a href="#">Te olvidaste tu password?</a>
               </div>
 
-             <button type="submit" class="btn btn-primary">Ingresa</button>
+             <button type="submit" class="btn">Ingresa</button>
 
          </form>
        </div>

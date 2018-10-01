@@ -78,7 +78,7 @@ if($_POST){
   <div class="container">
 
     <div class="row header text-center">
-      <div class="col"> Formulario de reguistro</div>
+      <div class="col"><h2>Creá tu cuenta</h2></div>
     </div>
 
   <div class="row">
@@ -92,28 +92,28 @@ if($_POST){
           <form action="registro.php" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
-              <label for="userName">Nombre y apellido:
-              <input type="text" class="form-control" id="name" placeholder="Nombre completo"  name="name" value="<?php echo isset($_POST["userName"]) ? $_POST["userName"] : ''; ?>"><span class="required"> *</span>
+              <label for="userName"><span class="required"> *</span>Nombre y apellido:
+              <input type="text" class="form-control" id="name" placeholder="Nombre completo"  name="name" value="<?php echo isset($_POST["userName"]) ? $_POST["userName"] : ''; ?>">
               <span class="error"> <?php echo $errorName;?> </span>
               </label>
             </div>
 
             <div class="form-group">
-              <label  for="username">Nombre de usuario:
-              <input  type="text" class="form-control" id="userName" name="userName" placeholder="Nombre de usuario" value="<?php echo isset($_POST["username"]) ? $_POST["username"] : ''; ?>"><span class="required"> *</span>
+              <label  for="username"><span class="required"> *</span>Nombre de usuario:
+              <input  type="text" class="form-control" id="userName" name="userName" placeholder="Nombre de usuario" value="<?php echo isset($_POST["username"]) ? $_POST["username"] : ''; ?>">
               </label>
             </div>
 
             <div class="form-group">
-              <label for="userPass">Contraseña:
-              <input type="password" class="form-control" name="userPass" minlength="5" value="<?php echo isset($_POST["userPass"]) ? $_POST["userPass"] : ''; ?>"><span class="required"> *</span>
+              <label for="userPass"><span class="required"> *</span>Contraseña:
+              <input type="password" class="form-control" name="userPass" minlength="5" value="<?php echo isset($_POST["userPass"]) ? $_POST["userPass"] : ''; ?>">
               <span class="error"> <?php echo $errorPass;?> </span>
               </label>
             </div>
 
             <div class="form-group">
-              <label for="userPassConfirmation">Confirmar contraseña:
-              <input type="password" class="form-control" name="userPassConfirmation" mixlength="5"><span> *</span>
+              <label for="userPassConfirmation"><span class="required"> *</span>Confirmar contraseña:
+              <input type="password" class="form-control" name="userPassConfirmation" mixlength="5">
               <span class="error"> <?php echo $errorConfirmation;?> </span>
               </label>
             </div>
@@ -376,8 +376,8 @@ if($_POST){
             </div>
 
             <div class="form-group">
-              <label for ="userEmail">Email:
-              <input type="email" class="form-control" name="userEmail" value="<?php echo isset($_POST["userEmail"]) ? $_POST["userEmail"] : ''; ?>"><span class="required"> *</span>
+              <label for ="userEmail"><span class="required"> *</span>Email:
+              <input type="email" class="form-control" name="userEmail" value="<?php echo isset($_POST["userEmail"]) ? $_POST["userEmail"] : ''; ?>">
               <span class="error"> <?php echo $errorEmail;?> </span>
               </label>
             </div>
@@ -390,7 +390,7 @@ if($_POST){
                 </label>
             </div>
 
-            <h6>Los campos con un asterisco al lado son necesarios</h6>
+            <p>Los campos con un asterisco al lado son necesarios</p>
 
             <br>
 

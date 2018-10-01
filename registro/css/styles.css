@@ -36,3 +36,7 @@ padding:40px;
   color: red;
   font-size: 14px;
 }
+
+.btn:hover{
+  background-color: rgb(221,170,43);
+}

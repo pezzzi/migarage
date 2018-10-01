@@ -90,3 +90,16 @@ font-size: 16px;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.vehicleType{
+  color: white;
+}
+
+.formP{
+  color: white;
+}
+
+.navBarRadio{
+  background-color: rgb(115, 121, 130, .4);
+  box-shadow: 0px 1px 6px black;
+}

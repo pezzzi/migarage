@@ -28,11 +28,13 @@
                   <option value="laPlata">La Plata
                   <option value="CABA">CABA</option>
                 </select>
-                <p class="formP">Tipo de vehiculo</p>
-                <input type="radio" name="vehicle" value="auto">Auto
-                <input type="radio" name="vehicle" value="camion">Camion
-                <input type="radio" name="vehicle" value="camioneta">Camioneta
-                <input type="radio" name="vehicle" value="moto">Moto
+                <label class="navBarRadio">
+                  <p class="formP">Tipo de vehiculo</p>
+                  <input type="radio" name="vehicle" value="auto"><span class="vehicleType">Auto</span>
+                  <input type="radio" name="vehicle" value="camion"><span class="vehicleType">Camion</span>
+                  <input type="radio" name="vehicle" value="camioneta"><span class="vehicleType">Camioneta</span>
+                  <input type="radio" name="vehicle" value="moto"><span class="vehicleType">Moto</span>
+                </label>
                 <br>
                 <input type="submit" name="buscar" value="Buscar">
               </form>
