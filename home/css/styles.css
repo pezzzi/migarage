@@ -71,6 +71,17 @@ p{
   margin-bottom: 0;
 }
 
+/*Estilos del faqs*/
+.preguntafaqs{
+font-style: italic;
+font-size: 20px;
+}
+
+.respuesta{
+font-style: normal;
+font-size: 16px;
+}
+
 
 /**/
 .main{
