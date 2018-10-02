@@ -5,10 +5,11 @@
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../home/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-
+    <?php include('../home/header.php') ?>
   <div class="container">
 
      <div class="row header text-center">
@@ -21,7 +22,7 @@
 
        </div>
 
-       <div class="col-10 col-sm-8 col-lg-4 padding sombra" style="background-color:white;" onsubmit="return validacion()">
+       <div class="col-10 col-sm-8 col-lg-4 padding sombra marginBottom paddingTop" style="background-color:white;" onsubmit="return validacion()">
          <form action="loginProceso.php" method="post">
 
              <div class="form-group">
@@ -52,7 +53,7 @@
 
 
   </div>
-
+     <footer><?php include('../home/footer.php') ?></footer>
   </body>
 
 </html>

@@ -8,16 +8,17 @@
   </head>
   <body>
     <?php include('provincias.php') ?>
-    <div class="container-fluid">
-      <header>
-        <?php include('header.php') ?>
-      </header>
+    <header>
+      <?php include('header.php') ?>
+    </header>
       <section>
-        <article class="main">
-          <div class="justify-content-center row searchFilter">
+        <article class="mainHome">
+          <div class="row justify-content-center searchFilter">
             <div class="col-5">
+              <h2>Encuentra tu garage</h2>
               <form class="" action="home.php" method="get">
                 <select class="homeMain" name="provincias">
+                  <option disabled selected value>--Provincia--</option>
                   <?php foreach ($provincias as $provincia) {
                     ?>
                       <option value="<?php echo $provincia['data'] ?>"><?php echo $provincia['name']; ?></option>
@@ -25,6 +26,7 @@
                   } ?>
                 </select>
                 <select class="" name="localidades">
+                  <option disabled selected value>--Localidad--</option>
                   <option value="laPlata">La Plata
                   <option value="CABA">CABA</option>
                 </select>
@@ -42,9 +44,9 @@
           </div>
         </article>
       </section>
-      <footer>
-        <?php include('footer.php') ?>
-      </footer>
     </div>
+    <footer>
+      <?php include('footer.php') ?>
+    </footer>
   </body>
 </html>

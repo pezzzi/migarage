@@ -69,15 +69,18 @@ if($_POST){
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../home/css/styles.css">
   <title>Formularios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header>
+    <?php include('../home/header.php') ?>
+  </header>
+  <div class="container-fluid background">
 
-  <div class="container">
-
-    <div class="row header text-center">
+    <div class="row header text-center paddingTop">
       <div class="col"><h2>Creá tu cuenta</h2></div>
     </div>
 
@@ -87,7 +90,7 @@ if($_POST){
 
     </div>
 
-    <div class="col-10 padding sombra" style="background-color:white;" onsubmit="return validacion()">
+    <div class="col-10 padding sombra marginBottom paddingTop" style="background-color:white;" onsubmit="return validacion()">
 
           <form action="registro.php" method="post" enctype="multipart/form-data">
 
@@ -402,11 +405,9 @@ if($_POST){
           </form>
       </div>
 
-      <div class="col-1">
-
-    </div>
-
-
    </div>
+
+  </div>
+     <footer><?php include('../home/footer.php') ?></footer>
 </body>
 </html>

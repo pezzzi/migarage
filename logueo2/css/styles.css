@@ -1,5 +1,6 @@
 body{
-  background-image:url("https://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_1.jpg");
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png");
   background-repeat: repeat;
   background-position:center;
   background-attachment: fixed;
@@ -29,4 +30,13 @@ padding:40px;
 
 .btn:hover{
   background-color: rgb(221,170,43);
+}
+
+.marginBottom {
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.paddingTop{
+  margin-top: 10px;
 }

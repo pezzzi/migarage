@@ -7,11 +7,12 @@
     <title>Mi Garage - Preguntas frecuentes</title>
   </head>
   <body>
-    <div class="container-fluid">
 
     <header>
       <?php include('header.php') ?>
     </header>
+    <div class="container-fluid">
+
     <section class="mainSectionFaq">
       <article class="cuadroFaq">
         <div class="preguntafaqs">¿Qué es mi garage?</div>
@@ -75,10 +76,11 @@
       </article>
 
     </section>
-    <footer>
-      <?php include('footer.php') ?>
-    </footer>
+
 
   </div>
+  <footer>
+    <?php include('footer.php') ?>
+  </footer>
   </body>
 </html>
