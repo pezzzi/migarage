@@ -37,6 +37,9 @@ padding:40px;
   margin-bottom: 5px;
 }
 
-.paddingTop{
+.marginTop{
   margin-top: 10px;
+}
+.heigth{
+  height: 450px;
 }

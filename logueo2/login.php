@@ -10,19 +10,19 @@
   </head>
   <body>
     <?php include('../home/header.php') ?>
-  <div class="container">
+  <div class="container-fluid heigth">
 
      <div class="row header text-center">
        <div class="col"><h2>Ingrese a su cuenta</h2></div>
      </div>
 
-     <div class="row">
+     <div class="row height">
 
-       <div class="col-1 col-sm-2 col-lg-4" >
+       <div class="col-1 col-sm-2 col-lg-4 height" >
 
        </div>
 
-       <div class="col-10 col-sm-8 col-lg-4 padding sombra marginBottom paddingTop" style="background-color:white;" onsubmit="return validacion()">
+       <div class="col-10 col-sm-8 col-lg-4 padding sombra marginBottom marginTop height" style="background-color:white;" onsubmit="return validacion()">
          <form action="loginProceso.php" method="post">
 
              <div class="form-group">
