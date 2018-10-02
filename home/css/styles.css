@@ -1,5 +1,9 @@
 /*Header*/
-
+header{
+  border-width: thin;
+  border: 1px solid black;
+  border-top: 0px;
+}
 .logoImg{
   width: 80%;
   padding-left: 0;
@@ -73,18 +77,32 @@ p{
 
 /*Estilos del faqs*/
 .preguntafaqs{
+padding-left: 10px;
 font-style: italic;
 font-size: 20px;
+border-bottom: 1px solid black;
+background-color: rgb(221,170,43);
 }
 
 .respuesta{
+padding-left: 10px;
 font-style: normal;
 font-size: 16px;
+background-color: rgba(139, 139, 139, 0.54);
 }
 
+.cuadroFaq{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  box-shadow: 2px 2px 1px 1px;
+}
 
 /**/
 .main{
+  border: 1px solid black;
+  border-bottom: 0px;
   height: 800px;
   background-image: url('../images/bg.jpg');
   background-position: center;
