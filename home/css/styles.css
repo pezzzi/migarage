@@ -1,3 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+body{
+  font-family: 'PT Serif', serif;
+}
+.hHome{
+  color: white;
+}
 /*Header*/
 
 .logoImg{
@@ -12,6 +20,12 @@
 }
 
 /*Barra de navegacion*/
+.paddingLeft{
+  padding-left: 0;
+}
+.marginR{
+  margin-right: 0;
+}
 
 .navBarUl{
 
@@ -68,6 +82,7 @@ footer{
 }
 
 p{
+  text-align: center;
   padding-bottom: 0;
   margin-bottom: 0;
 }

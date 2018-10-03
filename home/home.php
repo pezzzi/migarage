@@ -13,9 +13,9 @@
     </header>
       <section>
         <article class="mainHome">
-          <div class="row justify-content-center searchFilter">
+          <div class="row justify-content-center searchFilter marginRight">
             <div class="col-5">
-              <h2>Encuentra tu garage</h2>
+              <h2 class="hHome">Busca un garage</h2>
               <form class="" action="home.php" method="get">
                 <select class="homeMain" name="provincias">
                   <option disabled selected value>--Provincia--</option>
@@ -30,6 +30,7 @@
                   <option value="laPlata">La Plata
                   <option value="CABA">CABA</option>
                 </select>
+
                 <label class="navBarRadio">
                   <p class="formP">Tipo de vehiculo</p>
                   <input type="radio" name="vehicle" value="auto"><span class="vehicleType">Auto</span>

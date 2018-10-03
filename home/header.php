@@ -4,7 +4,7 @@
   </div>
 </div>
 <nav>
-  <div class="row navBar">
+  <div class="row">
     <div class="col-12">
       <ul class="navBarUl">
         <a class="navBarA" href="../home/home.php"><li class="navBarLiL">Home</li></a>
