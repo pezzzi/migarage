@@ -84,13 +84,13 @@ if($_POST){
       <div class="col"><h2>Creá tu cuenta</h2></div>
     </div>
 
-  <div class="row">
+  <div class="row justify-content-center marginRightReg">
 
     <div class="col-1" >
 
     </div>
 
-    <div class="col-10 padding sombra marginBottom paddingTop" style="background-color:white;" onsubmit="return validacion()">
+    <div class="col-10 col-sm-8 col-lg-6 padding sombra marginBottom paddingTop" style="background-color:white;" onsubmit="return validacion()">
 
           <form action="registro.php" method="post" enctype="multipart/form-data">
 
