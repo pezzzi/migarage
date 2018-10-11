@@ -16,7 +16,7 @@
           <div class="row justify-content-center searchFilter marginRight">
             <div class="col-5">
               <h2 class="hHome">Busca un garage</h2>
-              <form class="" action="home.php" method="get">
+              <form class="" action="../catalogo/catalogo.php" method="get">
                 <select class="homeMain" name="provincias">
                   <option disabled selected value>--Provincia--</option>
                   <?php foreach ($provincias as $provincia) {
@@ -28,18 +28,30 @@
                 <select class="" name="localidades">
                   <option disabled selected value>--Localidad--</option>
                   <option value="laPlata">La Plata
-                  <option value="CABA">CABA</option>
+                  <option value="CABA">CABA
                 </select>
 
                 <label class="navBarRadio">
                   <p class="formP">Tipo de vehiculo</p>
-                  <input type="radio" name="vehicle" value="auto"><span class="vehicleType">Auto</span>
-                  <input type="radio" name="vehicle" value="camion"><span class="vehicleType">Camion</span>
-                  <input type="radio" name="vehicle" value="camioneta"><span class="vehicleType">Camioneta</span>
-                  <input type="radio" name="vehicle" value="moto"><span class="vehicleType">Moto</span>
+                  <input type="radio" name="vehicle" value="auto">Auto
+                  <input type="radio" name="vehicle" value="camion">Camion
+                  <input type="radio" name="vehicle" value="camioneta">Camioneta
+                  <input type="radio" name="vehicle" value="moto">Moto
                 </label>
                 <br>
-                <input type="submit" name="buscar" value="Buscar">
+                <p>Tiempo de estadia</p>
+                  <div class="col-2 centered">
+                     <input class="block" type="text" name="estadia" value="">
+                  </div>
+                    <div class="col-2 block">
+                      <select class="block" name="tiempo">
+                          <option value="hs">Hora</option>
+                          <option value="day">Dia</option>
+                          <option value="month">Mes</option>
+                      </select>
+                    </div>
+                </div>
+                <input class="floatL" type="submit" name="buscar" value="Buscar">
               </form>
             </div>
           </div>
@@ -49,5 +61,6 @@
     <footer>
       <?php include('footer.php') ?>
     </footer>
+
   </body>
 </html>

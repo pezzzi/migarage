@@ -148,3 +148,7 @@ p{
 .marginRightReg{
   margin-right: 70px;
 }
+
+.block{
+  display: block;
+}
