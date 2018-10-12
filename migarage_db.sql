@@ -1,19 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 11-10-2018 a las 11:31:44
--- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
--- Versión de PHP: 7.2.6-1+ubuntu16.04.1+deb.sury.org+1
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 12-10-2018 a las 16:02:48
+-- Versión del servidor: 10.1.34-MariaDB
+-- Versión de PHP: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
-DROP DATABASE IF EXISTS migarage_db;
-CREATE DATABASE migarage_db;
-USE migarage_db;
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -21,7 +19,7 @@ USE migarage_db;
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `migarage`
+-- Base de datos: `migarage_db`
 --
 
 -- --------------------------------------------------------
@@ -97,19 +95,24 @@ CREATE TABLE `usuarios` (
 -- Indices de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `userid` (`userid`),
+  ADD KEY `postid` (`postid`);
 
 --
 -- Indices de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `userid` (`userid`);
 
 --
 -- Indices de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `postid` (`postid`),
+  ADD KEY `userid` (`userid`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -146,6 +149,30 @@ ALTER TABLE `reservas`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `usuarios` (`id`),
+  ADD CONSTRAINT `comentarios_ibfk_2` FOREIGN KEY (`postid`) REFERENCES `publicaciones` (`id`);
+
+--
+-- Filtros para la tabla `publicaciones`
+--
+ALTER TABLE `publicaciones`
+  ADD CONSTRAINT `publicaciones_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `reservas`
+--
+ALTER TABLE `reservas`
+  ADD CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`postid`) REFERENCES `publicaciones` (`id`),
+  ADD CONSTRAINT `reservas_ibfk_2` FOREIGN KEY (`userid`) REFERENCES `usuarios` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
