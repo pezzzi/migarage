@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 12-10-2018 a las 16:02:48
--- Versión del servidor: 10.1.34-MariaDB
--- Versión de PHP: 7.2.7
+-- Servidor: localhost
+-- Tiempo de generación: 16-10-2018 a las 11:58:16
+-- Versión del servidor: 5.7.23-0ubuntu0.16.04.1
+-- Versión de PHP: 7.2.6-1+ubuntu16.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `migarage_db`
+-- Base de datos: `migarage`
 --
 
 -- --------------------------------------------------------
@@ -88,6 +88,14 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `fullname`, `username`, `password`, `email`, `phone`, `birthdate`, `address`, `avatar`) VALUES
+(1, 'Gabriel Hola', 'gabrielriver', 'password1', 'gabriel@gmail.hola', 12345678, '2018-10-01', 'Aca a la vuelta', NULL),
+(2, 'Juan Carlos', 'juancagol', 'password1', 'jaunca@dh.com', 2354234534, '2018-10-16', 'DH', NULL);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -95,24 +103,19 @@ CREATE TABLE `usuarios` (
 -- Indices de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `userid` (`userid`),
-  ADD KEY `postid` (`postid`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `userid` (`userid`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `postid` (`postid`),
-  ADD KEY `userid` (`userid`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -148,31 +151,7 @@ ALTER TABLE `reservas`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `comentarios`
---
-ALTER TABLE `comentarios`
-  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `usuarios` (`id`),
-  ADD CONSTRAINT `comentarios_ibfk_2` FOREIGN KEY (`postid`) REFERENCES `publicaciones` (`id`);
-
---
--- Filtros para la tabla `publicaciones`
---
-ALTER TABLE `publicaciones`
-  ADD CONSTRAINT `publicaciones_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `usuarios` (`id`);
-
---
--- Filtros para la tabla `reservas`
---
-ALTER TABLE `reservas`
-  ADD CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`postid`) REFERENCES `publicaciones` (`id`),
-  ADD CONSTRAINT `reservas_ibfk_2` FOREIGN KEY (`userid`) REFERENCES `usuarios` (`id`);
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
