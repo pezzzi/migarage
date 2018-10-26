@@ -152,3 +152,15 @@ p{
 .block{
   display: block;
 }
+
+.buscar{
+  float:left;
+  width: 30%;
+}
+
+.button{
+  background-color: red;
+  border:none;
+  color:black;
+  font-size: 20px;
+}
