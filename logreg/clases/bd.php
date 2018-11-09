@@ -4,9 +4,10 @@
  */
 class bd
 {
-  private $dns="mysql:host=localhost;dbname=usuarios";
+  private $dns="mysql:host=localhost;dbname=migarage;
+  charset=utf8mb4;port=3306";
   private $user="root";
-  private $password="";
+  private $password="root";
   private $opt=[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION];
   private $conex;
   function __construct()
@@ -20,17 +21,20 @@ class bd
   }
 
   public function guardarUsuario(Usuarios $usuario){
-    $query = $this->conex->prepare('INSERT INTO usuario(username, edad ,telefono,avatar,email) VALUES(:username, :edad ,:telefono,:avatar,:email)');
+    $query = $this->conex->prepare('INSERT INTO usuarios(username, birthdate , phone, email, address, fullname, password) VALUES(:username, :birthdate ,:phone,:email, :address, :fullname, :password)');
 
-    $query->bindvalue(':username', $usuario->getUsername() );
-    $query->bindvalue(':edad', $usuario->getEdad() );
-    $query->bindvalue(':telefono', $usuario->getTelefono() );
-    $query->bindvalue(':avatar', $usuario->getAvatar() );
-    $query->bindvalue(':email', $usuario->getEmail() );
+    $query->bindValue(':username', $usuario->getUsername() );
+    $query->bindValue(':birthdate', $usuario->getBirthdate() );
+    $query->bindValue(':phone', $usuario->getPhone() );
+    // $query->bindValue(':avatar', $usuario->getAvatar() );
+    $query->bindValue(':email', $usuario->getEmail() );
+    $query->bindValue(':fullname', $usuario->getFullname() );
+    $query->bindValue(':address', $usuario->getAddress() );
+    $query->bindValue(':password', $usuario->getPassword() );
 
     $query->execute();
     $id = $this->conex->lastInsertId();
-    $usuarios->setId();
+    $usuario->setId($id+1);
     return $usuario;
   }
 

@@ -19,7 +19,7 @@ class Usuario {
 	public function login($name,$pass){
 		$devolucion = false;
 
-		$st=$this->db->prepare("select * from usuarios where username=? and password=?");
+		$st=$this->db->prepare("SELECT * FROM usuarios WHERE username = ? AND password = ?");
 		$st->bindParam(1, $name);
 		$st->bindParam(2, $pass);
 		$st->execute();

@@ -1,9 +1,13 @@
 <?php
 
-class auth
+class Auth
 {
   public function __construct(){
     session_start();
+
+    if (!isset($_SESSION["logueado"]) && isset($_COOKIE["logueado"])) {
+			$_SESSION["logueado"] = $_COOKIE["logueado"];
+		}
   }
 
   public function loguear($email){
@@ -19,8 +23,8 @@ class auth
   }
 
   public function logOut(){
-    setcookie('logueado',NULL,time()-1);
     session_destroy();
+    setcookie('logueado',NULL,time()-1);
   }
 
   public function usuarioLogueado($base){
