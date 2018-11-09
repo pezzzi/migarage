@@ -10,7 +10,7 @@ include_once('clases/Usuario.php');
   $object = new Usuario;
 
   if( $object->login($nombre,$contrasena) ){
-		header("Location: exito.php?");
+		header("Location: ../perfil/perfil.php?");
   }else{
 		header("Location: fracaso.php?");
 

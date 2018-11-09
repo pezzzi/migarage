@@ -138,6 +138,7 @@ if($_POST){
 
             <div class="form-group " >
               <label class="etiqueta">Telefono:
+                <br>
                 <input type="text" name="userPhone" value="">
               </label>
             </div>
@@ -151,6 +152,8 @@ if($_POST){
 
             <div class="form-group">
               <label for="userBirthdate">
+                  Fecha de nacimiento:
+                  <br>
                   <input type="date" name="userBirthdate" value="">
               </label>
             </div>

@@ -26,6 +26,7 @@
                   <?php
                   } ?>
                 </select>
+                
                 <select class="selectFilter" name="localidades">
                   <option disabled selected value>--Localidad--</option>
                   <option value="laPlata">La Plata

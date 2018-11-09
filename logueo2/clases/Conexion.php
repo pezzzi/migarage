@@ -7,7 +7,7 @@ class Conexion {
 
 	public function dbConnect() {
 
-		return new PDO('mysql:host=localhost;dbname=migarage', "root", "root", [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
+		return new PDO('mysql:host=localhost;dbname=migarage_db', "root", "", [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]);
 
 		}
 
