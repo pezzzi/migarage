@@ -1,0 +1,38 @@
+.profilePic{
+  width: 150%;
+  border-radius: 50%;
+  margin-top: 50%;
+}
+body{
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png");
+  background-repeat: repeat;
+  background-position:center;
+  background-attachment: fixed;
+  background-size:cover;
+}
+
+.heigth{
+  height: 100%;
+  padding-top: 20px;
+}
+
+.profile{
+  width:600px;
+  border: solid rgba(46, 46, 46, 0.71) 1px;
+  background-color: white;
+}
+
+.width{
+  width: 85%;
+}
+
+.datos{
+  margin-top: 50px;
+}
+.centered{
+  text-align: center;
+}
+.box{
+
+}
