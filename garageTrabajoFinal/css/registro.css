@@ -50,3 +50,7 @@ padding:40px;
 .paddingTop{
   margin-top: 10px;
 }
+
+.required {
+  color: red;
+}

@@ -12,79 +12,77 @@ class Validator {
   function __construct(){
   }
 
-  public function validarLogIn($juan, $base){
+  public function validarLogIn($datos, $base){
     // foreach ($datos as $key => $value) {
 		// 	$datos[$key] = trim($value);
     // }
 
-    if($juan->email==""){
+    if($datos['email']==""){
       $this->erroresLogueo['email']="Completa el nombre de usuario";
-    } else if(strlen($juan->email) < 3) {
+    } else if(strlen($datos['email']) < 3) {
       $this->erroresLogueo['email']='Necesito mas de 3 caracteres';
-    } if($base->traerPorEmail($juan->email)==NULL) {
+    } if($base->traerPorEmail($datos['email'])==NULL) {
       $this->erroresLogueo['email']='El email no esta en nuestra base';
     }
 
-    $usuario = $base->traerPorEmail($juan->email);
+    $usuario = $base->traerPorEmail($datos['email']);
 
-    if($juan->password==""){
+    if($datos['password']==""){
       $this->erroresLogueo['contraseña']="Completa la contraseña";
     } else if ($usuario != NULL) {
-      if(!password_verify($juan->password, $usuario['password'])) {
+      if(!password_verify($datos['password'], $usuario['password'])) {
         $this->erroresLogueo['password']='La contraseña no verifica';
       }
     }
-    var_dump($this->erroresLogueo);
     return $this->erroresLogueo;
 }
 
 
-  public function validarRegistro($juan, $base){
+  public function validarRegistro($user, $base){
     // foreach ($juan as $key => $value) {
 		// 	$juan[$key] = trim($value);
     // }
 
-    if (strlen($juan->username) <= 3) {
+    if (strlen($user->username) <= 3) {
 			$this->erroresRegistro['username'] = "Tenes que poner más de 3 caracteres en tu nombre de usuario";
-		} else if(!preg_match( '/^\w{5,}$/' , $juan->username)) {
+		} else if(!preg_match( '/^\w{5,}$/' , $user->username)) {
       $this->erroresRegistro['username'] = 'Debe ingresar un nombre válido';
     }
 
-    if($juan->fullname == ''){
+    if($user->fullname == ''){
       $this->erroresRegistro['fullname'] = 'Debe ingresar su nombre';
-    }else if( !preg_match( '/^[a-z ,.\'-]+$/i' , $juan->fullname)){
+    }else if( !preg_match( '/^[a-z ,.\'-]+$/i' , $user->fullname)){
       $this->erroresRegistro['fullname'] = 'Debe ingresar un nombre válido';
     }
 
-    if($juan->address == '') {
-      $this->erroresRegistro['address']='Debe ingresar su dirección';
-    }
+    // if($user->address == '') {
+    //   $this->erroresRegistro['address']='Debe ingresar su dirección';
+    // }
 
     // falta pasar de birthdate a edad
 		// if ($juan["edad"] < 18) {
 		// 	$this-erroresRegistro["edad"] = "Tenes que tener más de 18 años";
     // }
 
-		if ($juan->email == "") {
+		if ($user->email == "") {
 			$this->erroresRegistro["email"] = "Debe ingresar un email";
-		} else if (filter_var($juan->email, FILTER_VALIDATE_EMAIL) == false) {
+		} else if (filter_var($user->email, FILTER_VALIDATE_EMAIL) == false) {
 			$this->erroresRegistro["mail"] = "Debe ingresar un email válido";
-		} else if ($base->traerPorEmail($juan->email) != NULL) {
+		} else if ($base->traerPorEmail($user->email) != NULL) {
 			$this->erroresRegistro["mail"] = "Email existente. Intente otro por favor";
 		}
 
-		if ($juan->password == "") {
+		if ($user->password == "") {
 			$this->erroresRegistro["password"] = "Debe ingresar una contraseña";
 		}
 
-		// if ($juan->cpassword == "") {
-		// 	$this->erroresRegistro["cpassword"] = "Debe confirmar su contraseña";
-		// }
-    //
-		// if ($juan->password != "" && $juan->cpassword != "" && $juan->password != $juan->cpassword) {
-		// 	$this->erroresRegistro["password"] = "Las contraseñas no coinciden";
-    // }
-    var_dump($this->erroresRegistro);
+		if ($user->passConfirmation == "") {
+			$this->erroresRegistro["passConfirmation"] = "Debe confirmar su contraseña";
+		}
+
+		if ($user->password != "" && $user->passConfirmation != "" && $user->password != $user->passConfirmation) {
+			$this->erroresRegistro["password"] = "Las contraseñas no coinciden";
+    }
     return $this->erroresRegistro;
   }
 

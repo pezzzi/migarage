@@ -1,7 +1,6 @@
 <?php
 
-class Auth
-{
+class Auth {
   public function __construct(){
     session_start();
 
@@ -27,9 +26,11 @@ class Auth
     setcookie('logueado',NULL,time()-1);
   }
 
+  //revisar usuarioLogueado
+
   public function usuarioLogueado($base){
     if($this->estaLogueado()){
-      $logueado=$base->traerPorEmail($SESSION['logueado']);
+      $logueado=$base->traerPorEmail($_SESSION['logueado']);
       return $logueado;
     }else{
       return NULL;

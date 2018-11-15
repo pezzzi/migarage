@@ -2,8 +2,7 @@
 /**
  *
  */
-class bd
-{
+class bd {
   private $dns="mysql:host=localhost;dbname=migarage;
   charset=utf8mb4;port=3306";
   private $user="root";
@@ -19,6 +18,8 @@ class bd
     }
 
   }
+
+  //guardarUsuario funciona
 
   public function guardarUsuario(Usuarios $usuario){
     $query = $this->conex->prepare('INSERT INTO usuarios(username, birthdate , phone, email, address, fullname, password) VALUES(:username, :birthdate ,:phone,:email, :address, :fullname, :password)');
@@ -38,6 +39,7 @@ class bd
     return $usuario;
   }
 
+  //traerPorEmail funciona
 
   public function traerPorEmail($email){
     $query=$this->conex->prepare('SELECT * FROM usuarios WHERE email=:email');
@@ -47,10 +49,12 @@ class bd
     return $usuario;
   }
 
+  //traerTodos funciona
 
   public function traerTodos(){
-    $query=$this->conex->query("SELECT * FROM usuario");
+    $query=$this->conex->query("SELECT * FROM usuarios");
     $usuarios =$query->fetchAll(PDO::FETCH_OBJ);
+    var_dump($usuarios);
     return $usuarios;
   }
 }

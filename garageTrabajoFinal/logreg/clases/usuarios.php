@@ -14,7 +14,7 @@ class Usuarios {
   public $fullname;
 
 
-  function __construct($email, $password, $username, $birthdate, $phone, $fullname, $address, $id=null) {
+  function __construct($email, $password, $username, $fullname, $id=null) {
     if($id == null) {
       $this->password = password_hash($password, PASSWORD_DEFAULT);
     } else {
@@ -23,10 +23,7 @@ class Usuarios {
     $this->id=$id;
     $this->email=$email;
     $this->username=$username;
-    $this->birthdate=$birthdate;
-    $this->phone=$phone;
     $this->fullname=$fullname;
-    $this->address=$address;
   }
 
 
@@ -95,26 +92,26 @@ class Usuarios {
   }
 
 
-public function guardarImagen($email) {
-
-  if ($_FILES["avatar"]["error"] == UPLOAD_ERR_OK)
-  {
-
-    $nombre=$_FILES["avatar"]["name"];
-    $archivo=$_FILES["avatar"]["tmp_name"];
-
-    $ext = pathinfo($nombre, PATHINFO_EXTENSION);
-
-    if ($ext != "jpg" && $ext != "png" && $ext != "jpeg") {
-      return "Error";
-    }
-
-    $miArchivo = dirname(__FILE__);
-    $miArchivo = $miArchivo . "/../img/";
-    $miArchivo = $miArchivo . $this->getEmail() . "." . $ext;
-
-    move_uploaded_file($archivo, $miArchivo);
-  }
-}
+// public function guardarImagen($email) {
+//
+//   if ($_FILES["avatar"]["error"] == UPLOAD_ERR_OK)
+//   {
+//
+//     $nombre=$_FILES["avatar"]["name"];
+//     $archivo=$_FILES["avatar"]["tmp_name"];
+//
+//     $ext = pathinfo($nombre, PATHINFO_EXTENSION);
+//
+//     if ($ext != "jpg" && $ext != "png" && $ext != "jpeg") {
+//       return "Error";
+//     }
+//
+//     $miArchivo = dirname(__FILE__);
+//     $miArchivo = $miArchivo . "/../img/";
+//     $miArchivo = $miArchivo . $this->getEmail() . "." . $ext;
+//
+//     move_uploaded_file($archivo, $miArchivo);
+//   }
+// }
 
 }
