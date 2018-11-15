@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+
+<?php
+
+include('autoload.php');
+
+if ($_POST) {
+  $datos = [];
+  $datos['email'] = $_POST['email'];
+  $datos['password'] = $_POST['password'];
+
+  $validator->validarLogIn($datos, $base);
+  if ($validator->erroresLogueo == []) {
+    $auth->loguear($datos['email']);
+    header('Location: index.php');
+  }
+
+}
+
+?>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -23,20 +43,20 @@
        </div>
 
        <div class="col-10 col-sm-8 col-lg-4 padding sombra marginBottom marginTop height" style="background-color:white;" onsubmit="return validacion()">
-         <form action="loginProceso.php" method="post">
+         <form action="login.php" method="post">
 
              <div class="form-group">
-               <label for="usuario" >Ingresa tu usuario</label>
-               <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+               <label for="usuario" >Ingresa tu email</label>
+               <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
              </div>
 
              <div class="form-group">
-               <label for="password1">Ingresa tu Password</label>
-               <input type="password" class="form-control" id="password1" name="password1" placeholder="Contraseña" required>
+               <label for="password1">Ingresa tu Contraseña</label>
+               <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
              </div>
 
               <div class="olvido">
-                <a href="#">Te olvidaste tu password?</a>
+                <a href="#">Te olvidaste tu contraseña?</a>
               </div>
 
              <button type="submit" class="btn">Ingresa</button>

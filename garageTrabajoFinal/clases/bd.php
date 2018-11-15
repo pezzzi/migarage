@@ -3,10 +3,10 @@
  *
  */
 class bd {
-  private $dns="mysql:host=localhost;dbname=migarage;
+  private $dns="mysql:host=localhost;dbname=migarage_db;
   charset=utf8mb4;port=3306";
   private $user="root";
-  private $password="root";
+  private $password="";
   private $opt=[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION];
   private $conex;
   function __construct()
@@ -43,7 +43,7 @@ class bd {
 
   public function traerPorEmail($email){
     $query=$this->conex->prepare('SELECT * FROM usuarios WHERE email=:email');
-    $query->bindValue(":email", $email);
+    $query->bindValue(':email', $email);
     $query->execute();
     $usuario= $query->fetch();
     return $usuario;
