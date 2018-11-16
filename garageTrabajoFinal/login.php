@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <?php
-
 include('autoload.php');
 
 if ($_POST) {
@@ -9,10 +8,11 @@ if ($_POST) {
   $datos['email'] = $_POST['email'];
   $datos['password'] = $_POST['password'];
 
+
   $validator->validarLogIn($datos, $base);
   if ($validator->erroresLogueo == []) {
     $auth->loguear($datos['email']);
-    header('Location: index.php');
+    header('Location: perfil.php?');
   }
 
 }

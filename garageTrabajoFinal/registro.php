@@ -17,7 +17,7 @@ if ($_POST) {
   $base->guardarUsuario($user);
   $validator->validarRegistro($user, $base);
   if ($validator->erroresRegistro == []) {
-    header('login.php');
+    header('Location: login.php?');
   }
 }
 
