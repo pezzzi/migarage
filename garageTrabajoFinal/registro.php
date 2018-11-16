@@ -14,9 +14,9 @@ if ($_POST) {
 
   $user = new Usuarios($datos['email'], $datos['password'], $datos['username'], $datos['fullname']);
   $user->setPassConfirmation($datos['passConfirmation']);
-  $base->guardarUsuario($user);
   $validator->validarRegistro($user, $base);
   if ($validator->erroresRegistro == []) {
+    $base->guardarUsuario($user);
     header('Location: login.php?');
   }
 }
