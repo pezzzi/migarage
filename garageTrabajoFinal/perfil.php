@@ -63,7 +63,7 @@
                       }?>
                   </p>
 
-                  <button class="uploadButton" type="button" name="">Modificar</button>
+                  <!--<button class="uploadButton" type="button" name="">Modificar</button>-->
                 </form>
 
               </div>
