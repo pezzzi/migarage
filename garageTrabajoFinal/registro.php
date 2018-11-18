@@ -14,10 +14,10 @@ if ($_POST) {
 
   $user = new Usuarios($datos['email'], $datos['password'], $datos['username'], $datos['fullname']);
   $user->setPassConfirmation($datos['passConfirmation']);
-  $base->guardarUsuario($user);
   $validator->validarRegistro($user, $base);
   if ($validator->erroresRegistro == []) {
-    header('login.php');
+    $base->guardarUsuario($user);
+    header('Location: login.php?');
   }
 }
 

@@ -11,6 +11,7 @@ body{
   background-position:center;
   background-attachment: fixed;
   background-size:cover;
+  height: 100%;
 }
 
 .heigth{
@@ -22,7 +23,7 @@ body{
   width:600px;
   border: solid rgba(46, 46, 46, 0.71) 1px;
   background-color: white;
-
+  padding-bottom: 20px;
 }
 
 .width{
@@ -34,4 +35,16 @@ body{
 }
 .centered{
   text-align: center;
+}
+.box{
+
+}
+.uploadButton{
+  background-color: none;
+}
+.uploadButton:hover{
+  background-color: rgb(221,170,43);
+}
+.uploadImg{
+  width: 100%;
 }
