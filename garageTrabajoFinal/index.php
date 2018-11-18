@@ -16,7 +16,7 @@
           <div class="row justify-content-center searchFilter marginRight">
             <div class="col-lg-5 col-md-10  col-xs-8">
 
-              <form class="homeForm" action="../catalogo/catalogo.php" method="get">
+              <form class="homeForm" action="catalogo.php" method="get">
                 <h2 class="white formP">Busca un garage</h2>
                 <select class="selectFilter" name="provincias">
                   <option disabled selected value>--Provincia--</option>
@@ -26,7 +26,7 @@
                   <?php
                   } ?>
                 </select>
-                
+
                 <select class="selectFilter" name="localidades">
                   <option disabled selected value>--Localidad--</option>
                   <option value="laPlata">La Plata
