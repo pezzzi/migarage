@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 body{
-  font-family: 'PT Serif', serif;
+  font-family: 'Montserrat', serif;
+  overflow-x: hidden;
 }
 
 /*Header*/
@@ -193,4 +194,34 @@ p{
 
 h2{
   padding-bottom: 10px;
+}
+
+.smartphone {
+  display: none;
+}
+
+
+.desktop {
+  display: block;
+}
+
+
+.logo-smartphone{
+  width: 100px;
+}
+
+.navbar.smartphone {
+  background: rgb(221,170,43);
+}
+
+@media (max-width: 480px) {
+  .smartphone {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+
 }
