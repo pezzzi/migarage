@@ -1,0 +1,45 @@
+body{
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png");
+  background-repeat: repeat;
+  background-position:center;
+  background-attachment: fixed;
+  background-size:cover;
+}
+
+.header{
+height: 40px;
+}
+
+.padding{
+padding:40px;
+}
+
+.sombra{
+  box-shadow: 8px -7px 8px -3px rgba(0,0,0,0.68);
+  -webkit-box-shadow: 8px -7px 8px -3px rgba(0,0,0,0.68);
+  -moz-box-shadow: 8px -7px 8px -3px rgba(0,0,0,0.68);
+
+}
+
+.olvido{
+    font-size: 10px;
+    text-align: left;
+    margin-bottom:30px;
+}
+
+.btn:hover{
+  background-color: rgb(221,170,43);
+}
+
+.marginBottom {
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.marginTop{
+  margin-top: 10px;
+}
+.heigth{
+  height: 450px;
+}
