@@ -1,10 +1,16 @@
+<?php
+include("autoload.php")
+  ?>
+
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="css/css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
     <title>Mi Garage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <?php include('provincias.php') ;?>
@@ -13,7 +19,7 @@
     </header>
       <section>
         <article class="mainHome">
-          <div class="row justify-content-center searchFilter marginRight">
+          <div class="row justify-content-center searchFilter ">
             <div class="col-lg-5 col-md-10  col-xs-8">
 
               <form class="homeForm" action="catalogo.php" method="get">

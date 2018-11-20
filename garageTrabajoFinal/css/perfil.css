@@ -1,8 +1,12 @@
 .profilePic{
-  width: 150%;
+  width: 80%;
   border-radius: 50%;
   margin-top: 50%;
+  border:solid rgba(0, 0, 0, 0.5) 1px;
+  display: block;
+  margin: auto;
 }
+
 body{
   background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png");
@@ -46,4 +50,29 @@ body{
 }
 .uploadImg{
   width: 100%;
+}
+
+.perfil{
+  text-align: left;
+}
+
+.perfil h4{
+  margin-top: 20px;
+}
+
+.perfil p {
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .perfil{
+    text-align: center;
+  }
+
+
+  .perfil p {
+    text-align: center;
+  }
+
+
 }

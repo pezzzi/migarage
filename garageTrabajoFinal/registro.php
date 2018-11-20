@@ -118,11 +118,8 @@ if ($_POST) {
       <div class="col"><h2>Creá tu cuenta</h2></div>
     </div>
 
-  <div class="row justify-content-center marginRightReg">
+  <div class="row justify-content-center">
 
-    <div class="col-1" >
-
-    </div>
 
     <div class="col-10 col-sm-8 col-lg-6 padding sombra marginBottom paddingTop" style="background-color:white;" onsubmit="return validacion()">
 
