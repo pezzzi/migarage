@@ -10,8 +10,12 @@ class mainController extends Controller
 
   public function index(){
 
-     return view("index");
+     return view('index');
 
+  }
+
+  public function registration() {
+    return view('registration');
   }
 
 }

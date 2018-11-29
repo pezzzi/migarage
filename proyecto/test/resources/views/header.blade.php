@@ -28,7 +28,7 @@
                   echo '<li class="nav-item"><a class="nav-link" href="registro.php">Registrarse</span></a></li>
                         <li class="nav-item"><a class="nav-link" href="login.php">Login</span></a></li>';
               }
-               */?>
+               */ ?>
         </div>
 
 
