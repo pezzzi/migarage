@@ -18,3 +18,5 @@
 Route::get('/index', 'mainController@index');
 
 Route::get('/registration', 'mainController@registration');
+
+Route::get('hola', 'mainController@index') ;
