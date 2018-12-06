@@ -114,90 +114,67 @@ if ($_POST) {
 
     <div class="col-10 col-sm-8 col-lg-6 padding sombra marginBottom paddingTop" style="background-color:white;" onsubmit="return validacion()">
 
-          <form action="registro.php" method="post" enctype="multipart/form-data">
+      <form method="POST" action="{{ route('register') }}">
+          @csrf
 
-            <div class="form-group">
-              <label for="fullname"><span class="required"> *</span>Nombre y apellido:
-              <input type="text" class="form-control" id="name" placeholder="Nombre completo"  name="fullname" value="<?php echo isset($_POST["fullname"]) ? $_POST["fullname"] : ''; ?>">
-              <span class="error"> <?php /* if (isset($validator->erroresRegistro['fullname'])) {echo $validator->erroresRegistro['fullname'];}; */?> </span>
-              </label>
-            </div>
+          <div class="form-group row">
+              <label for="fullname" class="col-md-4 col-form-label text-md-right">{{ __('Full Name') }}</label>
 
-            <div class="form-group">
-              <label  for="username"><span class="required"> *</span>Nombre de usuario:
-              <input  type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario" value="<?php /* echo isset($_POST["username"]) ? $_POST["username"] : ''; */?>">
-              <span class="error"> <?php/* if (isset($validator->erroresRegistro['username'])) {echo $validator->erroresRegistro['username'];}; */?> </span>
-              </label>
-            </div>
+              <div class="col-md-6">
+                  <input id="fullname" type="text" class="form-control{{ $errors->has('fullname') ? ' is-invalid' : '' }}" name="fullname" value="{{ old('fullname') }}" required autofocus>
 
+                  @if ($errors->has('fullname'))
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $errors->first('fullname') }}</strong>
+                      </span>
+                  @endif
+              </div>
+          </div>
 
-            <!-- <div class="form-group " >
-              <label class="etiqueta">Telefono:
-                <br>
-                <input type="text" name="userPhone" value="">
-              </label>
-            </div> -->
+          <div class="form-group row">
+              <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-            <div class="form-group">
-              <label for ="email"><span class="required"> *</span>Email:
-              <input type="email" class="form-control" name="email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>">
-              <span class="error"> <?php/* if (isset($validator->erroresRegistro['email'])) {echo $validator->erroresRegistro['email'];};*/?> </span>
-              </label>
-            </div>
+              <div class="col-md-6">
+                  <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
-            <!-- <div class="form-group">
-              <label for="userBirthdate">
-                  Fecha de nacimiento:
-                  <br>
-                  <input type="date" name="userBirthdate" value="">
-              </label>
-            </div> -->
+                  @if ($errors->has('email'))
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $errors->first('email') }}</strong>
+                      </span>
+                  @endif
+              </div>
+          </div>
 
-            <div class="form-group">
-              <label for="country">
-                País:
-                <select value="country" id='countryForm'>
-                </select>
-              </label>
-            </div>
+          <div class="form-group row">
+              <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-            <!-- <div class="form-group">
-              <label for="userAddress">
-                  Direccion:
-                  <br>
-                  <input type="text" name="userAddress" value="">
-              </label>
-            </div> -->
+              <div class="col-md-6">
+                  <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-            <div class="form-group">
-              <label for="password"><span class="required"> *</span>Contraseña:
-                <input type="password" class="form-control" name="password"value="<?php echo isset($_POST["password"]) ? $_POST["password"] : ''; ?>">
-                <span class="error"> <?php/* if (isset($validator->erroresRegistro['password'])) {echo $validator->erroresRegistro['password'];};*/?> </span>
-              </label>
-            </div>
+                  @if ($errors->has('password'))
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $errors->first('password') }}</strong>
+                      </span>
+                  @endif
+              </div>
+          </div>
 
-            <div class="form-group">
-              <label for="passConfirmation"><span class="required"> *</span>Confirmar contraseña:
-                <input type="password" class="form-control" name="passConfirmation">
-                <span class="error"> <?php/* if (isset($validator->erroresRegistro['passConfirmation'])) {echo $validator->erroresRegistro['passConfirmation'];};*/?> </span>
-              </label>
-            </div>
+          <div class="form-group row">
+              <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
-            <!-- <div class="form-group">
-                <label for="userAvatar">Subi tu Avatar:
-                <input type="file" class="form-control" id="userAvatar" name="userAvatar" class="btn" value="">
-                <span class="error"> <?php /*echo $errorAvatar;*/?> </span>
-                </label>
-            </div> -->
+              <div class="col-md-6">
+                  <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+              </div>
+          </div>
 
-            <br>
-
-            <div class="">
-              <button type="reset" value="Reset" class="btn">Borrar</button>
-              <button type="submit" name="" class="btn">Registrate</button>
-            </div>
-
-          </form>
+          <div class="form-group row mb-0">
+              <div class="col-md-6 offset-md-4">
+                  <button type="submit" class="btn btn-primary">
+                      {{ __('Register') }}
+                  </button>
+              </div>
+          </div>
+      </form>
       </div>
 
    </div>

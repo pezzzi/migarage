@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('main')
+@section('content')
   <?php //include('provincias.php') ;?>
 
     <section>
