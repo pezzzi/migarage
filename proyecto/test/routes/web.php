@@ -17,8 +17,13 @@
 
 Route::get('/index', 'mainController@index');
 
+
 Route::get('/register', 'mainController@registration');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
+
+Route::get('/registration', 'mainController@registration');
+
+Route::get('hola', 'mainController@index') ;
