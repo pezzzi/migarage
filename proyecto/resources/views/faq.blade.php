@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" href="css/css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="utf-8">
-    <title>Mi Garage - Preguntas frecuentes</title>
+@extends('layouts.default')
 
-  </head>
-  <body>
-
-    <header>
-      <?php include('header.php') ?>
-    </header>
-
-
+@section('content')
 </div>
     <div class="container-fluid">
     <div class="row justify-content-center">
@@ -246,5 +233,4 @@
   </div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/js/bootstrap.js"></script>
-  </body>
-</html>
+  @endsection
