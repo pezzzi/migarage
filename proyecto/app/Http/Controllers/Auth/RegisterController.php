@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -55,6 +56,7 @@ class RegisterController extends Controller
             'username' => ['required', 'regex:/^\w{5,}$/', 'unique:users', 'max:40'],
             'country' => ['required'],
             'province' => ['nullable'],
+            'avatar' => ['image'],
         ]);
     }
 
@@ -66,6 +68,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+      if ( $data['avatar'] ) {
+        $path = $data['avatar']->storePublicly('public/avatar');
+      }
+
         return User::create([
             'fullname' => $data['fullname'],
             'email' => $data['email'],
@@ -73,6 +79,7 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'country_code' => $data['country'],
             'province' => $data['province']??null,
+            'avatar' => $path??null,
         ]);
 
     }

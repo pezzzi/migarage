@@ -14,11 +14,11 @@
                 <option disabled selected value>--Provincia--</option>
               </select>
 
-              <select class="selectFilter" name="localidades">
+              {{-- <select class="selectFilter" name="localidades">
                 <option disabled selected value>--Localidad--</option>
                 <option value="laPlata">La Plata
                 <option value="CABA">CABA
-              </select>
+              </select> --}}
 
               <label class="navBarRadio white">
                 <p class="formP">Tipo de vehiculo</p>
@@ -35,10 +35,10 @@
 
               <label class="white">
               <p class="formP white">Estadia</p>
-                <input type="radio" id="hora" name="stay" value="hora">
-                <label class="pointer" for="hora">Hora</label>
                 <input type="radio" id="dia" name="stay" value="dia">
                 <label class="pointer" for="dia">Dia</label>
+                <input type="radio" id="semana" name="stay" value="semana">
+                <label class="pointer" for="semana">Semana</label>
                 <input type="radio" id="mes" name="stay" value="mes">
                 <label class="pointer" for="mes">Mes</label>
               </label>
