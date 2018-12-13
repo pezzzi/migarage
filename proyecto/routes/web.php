@@ -26,3 +26,6 @@ Route::get('/faq', function() {
 Route::get('/register', 'mainController@registration');
 
 Auth::routes();
+
+Route::get('login/google', 'Auth\LoginController@redirectToProviderGoogle');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallbackGoogle');

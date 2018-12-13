@@ -62,6 +62,16 @@
                                 </a>
                             </div>
                         </div>
+
+                        <br>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a href="/login/google" class="btn btn-primary">
+                                    Login with Google
+                                </a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

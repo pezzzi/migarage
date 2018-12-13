@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Socialite;
+use Google_Client;
 
 class LoginController extends Controller
 {
@@ -52,4 +54,28 @@ class LoginController extends Controller
 
         return $this->loggedOut($request) ?: redirect('/index');
     }
+
+    /**
+    * Redirect the user to the Google authentication page.
+    *
+    * @return \Illuminate\Http\Response
+    */
+   public function redirectToProviderGoogle()
+   {
+       return Socialite::driver('google')->redirect();
+   }
+
+   /**
+    * Obtain the user information from Google.
+    *
+    * @return \Illuminate\Http\Response
+    */
+   public function handleProviderCallbackGoogle()
+   {
+       $user = Socialite::driver('google')->user();
+
+       dd($user);
+
+       // $user->token;
+   }
 }
