@@ -10,7 +10,7 @@
   <div class="row">
 
 
-        <a class="navbar-brand  logo-smartphone" href="/index"><img class="logoImg" src="img/logo.jpeg" alt="logo"></a>
+        <a class="navbar-brand  logo-smartphone" href="/"><img class="logoImg" src="img/logo.jpeg" alt="logo"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,11 +30,11 @@
   <div class="row">
     <div class="col-12">
       <ul class="navBarUl">
-        <a class="navBarA" href="/index"><li class="navBarLiL">Home</li></a>
+        <a class="navBarA" href="/"><li class="navBarLiL">Home</li></a>
         <a class="navBarA" href="/faq"><li class="navBarLiL">FAQ</li></a>
         @auth
           <a class="navBarA" href="/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><li class="navBarLiR">Salir</li></a>
-          <a class="navBarA" href="/perfil"><li class="navBarLiR">Perfil</li></a>
+          <a class="navBarA" href="/profile"><li class="navBarLiR">Perfil</li></a>
 
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               @csrf

@@ -4,6 +4,7 @@ body{
   overflow-x: hidden;
 }
 
+
 /*Header*/
 
 .logoImg{
@@ -224,4 +225,17 @@ h2{
   }
 
 
+}
+
+
+body.night,
+body.night .card,
+body.night .list-group-item{
+  background: black;
+  color: white;
+}
+
+body.night .card,
+body.night .list-group-item{
+  border-color: white;
 }
