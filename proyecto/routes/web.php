@@ -32,3 +32,5 @@ Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback
 
 Route::get('search', 'ResultController@search');
 Route::get('detail/{id}', 'ResultController@detail');
+
+Route::get('profile', 'ProfileController@profile');
