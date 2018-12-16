@@ -17,7 +17,7 @@
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/index', 'mainController@index');
+Route::get('/', 'mainController@index');
 
 Route::get('/faq', function() {
   return view('faq');
@@ -29,3 +29,6 @@ Auth::routes();
 
 Route::get('login/google', 'Auth\LoginController@redirectToProviderGoogle');
 Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallbackGoogle');
+
+Route::get('search', 'ResultController@search');
+Route::get('detail/{id}', 'ResultController@detail');

@@ -1,6 +1,6 @@
 <div class="row headerLogo desktop">
   <div class="col-4 ">
-    <img class="logoImg" src="img/logo.jpeg" alt="logo">
+    <img class="logoImg" src="/img/logo.jpeg" alt="logo">
   </div>
 </div>
 

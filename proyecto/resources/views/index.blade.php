@@ -8,7 +8,7 @@
         <div class="row justify-content-center searchFilter ">
           <div class="col-lg-5 col-md-10  col-xs-8">
 
-            <form class="homeForm" action="catalogo.php" method="get">
+            <form class="homeForm" action="search" method="get">
               <h2 class="white formP">Busca un garage</h2>
               <select class="selectFilter" name="provincias" id="province">
                 <option disabled selected value>--Provincia--</option>
