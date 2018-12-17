@@ -60,7 +60,7 @@ body{
   margin-top: 20px;
 }
 
-.perfil p {
+.profile p {
   text-align: left;
 }
 
@@ -69,10 +69,6 @@ body{
     text-align: center;
   }
 
-
-  .perfil p {
-    text-align: center;
-  }
 
 
 }

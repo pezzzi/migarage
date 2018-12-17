@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/index';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -68,9 +68,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-      if ( $data['avatar'] ) {
-        $path = $data['avatar']->storePublicly('public/avatar');
-      }
+      $request = request();
+      $path = $request->file('avatar')->storePublicly('avatars');
 
         return User::create([
             'fullname' => $data['fullname'],

@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     private function getProfile()
     {
       return [
@@ -17,7 +23,7 @@ class ProfileController extends Controller
         'address' => \Auth::user()->address,
         'country_code' => \Auth::user()->country_code,
         'email' => \Auth::user()->email,
-        'avatar' => 'http://lorempixel.com/400/400'
+        'avatar' => \Auth::user()->avatar,
       ];
     }
 

@@ -30,7 +30,10 @@ Auth::routes();
 Route::get('login/google', 'Auth\LoginController@redirectToProviderGoogle');
 Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallbackGoogle');
 
-Route::get('search', 'ResultController@search');
-Route::get('detail/{id}', 'ResultController@detail');
+Route::get('/search', 'ResultController@search');
+Route::get('/detail/{id}', 'PublicationController@show');
 
 Route::get('profile', 'ProfileController@profile');
+
+Route::get('/newPublication', 'PublicationController@create');
+Route::post('/newPublication', 'PublicationController@store');
