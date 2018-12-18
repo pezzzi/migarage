@@ -39,7 +39,7 @@ class ResultController extends Controller
       return $this->getMockProduct();
     }
 
-    public function search()
+    public function index()
     {
       return view('search',  ['results' => $this->getList()]);
     }

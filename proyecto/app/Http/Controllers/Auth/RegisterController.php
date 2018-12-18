@@ -69,7 +69,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
       $request = request();
-      $path = $request->file('avatar')->storePublicly('avatars');
+      if( ($request->file('avatar')) ){
+            $path = $request->file('avatar')->store('public/avatars');
+        }
 
         return User::create([
             'fullname' => $data['fullname'],

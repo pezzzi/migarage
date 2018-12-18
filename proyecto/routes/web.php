@@ -19,6 +19,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'mainController@index');
 
+Route::get('/search', 'SearchController@search');
+
 Route::get('/faq', function() {
   return view('faq');
 });
@@ -30,7 +32,7 @@ Auth::routes();
 Route::get('login/google', 'Auth\LoginController@redirectToProviderGoogle');
 Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallbackGoogle');
 
-Route::get('/search', 'ResultController@search');
+Route::get('/publications', 'ResultController@index');
 Route::get('/detail/{id}', 'PublicationController@show');
 
 Route::get('profile', 'ProfileController@profile');

@@ -8,7 +8,7 @@
         <div class="row justify-content-center searchFilter ">
           <div class="col-lg-5 col-md-10  col-xs-8">
 
-            <form class="homeForm" action="search" method="get">
+            <form class="homeForm" action="/search" method="get">
               <h2 class="white formP">Busca un garage</h2>
               <select class="selectFilter" name="provincias" id="province">
                 <option disabled selected value>--Provincia--</option>
@@ -22,24 +22,24 @@
 
               <label class="navBarRadio white">
                 <p class="formP">Tipo de vehiculo</p>
-                <input  type="radio" id="auto" name="vehicle" value="auto">
+                <input  type="checkbox" id="auto" name="vehicle" value="auto">
                 <label class="pointer" for="auto">Auto</label>
-                <input type="radio" id="camion" name="vehicle" value="camion">
+                <input type="checkbox" id="camion" name="vehicle" value="camion">
                 <label class="pointer" for="camion">Camion</label>
-                <input type="radio" id="camioneta" name="vehicle" value="camioneta">
+                <input type="checkbox" id="camioneta" name="vehicle" value="camioneta">
                 <label class="pointer" for="camioneta">Camioneta</label>
-                <input type="radio" id="moto" name="vehicle" value="moto">
+                <input type="checkbox" id="moto" name="vehicle" value="moto">
                 <label class="pointer" for="moto">Moto</label>
               </label>
               <br>
 
               <label class="white">
               <p class="formP white">Estadia</p>
-                <input type="radio" id="dia" name="stay" value="dia">
+                <input type="radio" id="dia" name="stay" value="daily">
                 <label class="pointer" for="dia">Dia</label>
-                <input type="radio" id="semana" name="stay" value="semana">
+                <input type="radio" id="semana" name="stay" value="weekly">
                 <label class="pointer" for="semana">Semana</label>
-                <input type="radio" id="mes" name="stay" value="mes">
+                <input type="radio" id="mes" name="stay" value="monthly">
                 <label class="pointer" for="mes">Mes</label>
               </label>
               <br>
