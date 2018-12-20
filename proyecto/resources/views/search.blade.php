@@ -1,23 +1,27 @@
 @extends('layouts.default')
 
 @section('content')
-<div class='container'>
-  <div class="row">
+<div class='container' style="position:relative">
+  <div class="row" style="height:820px">
 
-  @foreach ($results as $row)
-  <div class='col-lg-4 col-md-6 col-sm-12'>
-    <div class="card" style='margin-top: 25px;'>
-        <img class="card-img-top" src="{{$row['picture']}}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">{{$row['title']}}</h5>
-          <p class="card-text">{{$row['price']}}</p>
-          <a href="detail/{{$row['id']}}" class="btn btn-primary">Ver más</a>
+      @foreach ($results as $result)
+        <div class='col-lg-4 col-md-6 col-sm-12'>
+          <div class="card" style='margin-top: 25px;'>
+            <img class="card-img-top" src="{{$result['picture']}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{$result['title']}}</h5>
+              <p class="card-text">{{$result['price']}}</p>
+              <a href="/detail/{{$result['id']}}" class="btn btn-primary">Ver más</a>
+              <a href="/edit/{{$result['id']}}" class="btn btn-primary">Editar</a>
+              <a href="/destroy/{{$result['id']}}" class="btn btn-primary">Borrar</a>
+            </div>
+          </div>
         </div>
-    </div>
-    </div>
-  @endforeach
+      @endforeach
 
-  {{$results->links()}}
+    <div class="paginationButtons">
+      {{$results->links()}}
+    </div>
 
   </div>
 </div>

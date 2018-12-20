@@ -6,7 +6,7 @@
     <section>
       <article class="mainHome">
         <div class="row justify-content-center searchFilter ">
-          <div class="col-lg-5 col-md-10  col-xs-8">
+          <div class="col-lg-5 col-md-10  col-xs-8" id="btnGroup">
 
             <form class="homeForm" action="/search" method="get">
               <h2 class="white formP">Busca un garage</h2>
@@ -44,9 +44,14 @@
               </label>
               <br>
               <button class="buscar" type="submit" name="button">Buscar</button>
-              </div>
 
             </form>
+            <form class="showAll" action="/showAll" method="get">
+              <button type="submit" name="showAll" class="showAllBtn">Mostrar Todos</button>
+            </form>
+
+          </div>
+
           </div>
         </div>
       </article>

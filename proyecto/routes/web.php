@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'mainController@index');
 
 Route::get('/search', 'SearchController@search');
+Route::get('/showAll', 'SearchController@showAll');
 
 Route::get('/faq', function() {
   return view('faq');
@@ -39,3 +40,8 @@ Route::get('profile', 'ProfileController@profile');
 
 Route::get('/newPublication', 'PublicationController@create');
 Route::post('/newPublication', 'PublicationController@store');
+
+Route::get('/edit/{id}', 'PublicationController@edit');
+Route::post('/edit/{id}', 'PublicationController@update');
+
+Route::get('/destroy/{id}', 'PublicationController@destroy');

@@ -83,9 +83,12 @@ class PublicationController extends Controller
      * @param  \App\Publication  $publication
      * @return \Illuminate\Http\Response
      */
-    public function edit(Publication $publication)
+    public function edit($id)
     {
-        //
+        $item = \App\Publication::where('id', $id)->get();
+
+
+        return view('editPublication')->with('item', $item);
     }
 
     /**
@@ -95,9 +98,20 @@ class PublicationController extends Controller
      * @param  \App\Publication  $publication
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Publication $publication)
+    public function update(Request $request, $id)
     {
-        //
+        $publication = \App\Publication::find($id);
+        $publication->title = $request->title;
+        $publication->location = $request->location;
+        $publication->garageType = $request->garageType;
+        $publication->description = $request->description;
+        $publication->rentFormat = $request->rentFormat;
+        $publication->price = $request->price;
+        $publication->save();
+
+        $item = \App\Publication::where('id', $id)->get();
+
+        return view('detail')->with('item', $item);
     }
 
     /**
@@ -106,8 +120,10 @@ class PublicationController extends Controller
      * @param  \App\Publication  $publication
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Publication $publication)
+    public function destroy($id)
     {
-        //
+        \App\Publication::destroy($id);
+
+        return view('deletedResource'); 
     }
 }
