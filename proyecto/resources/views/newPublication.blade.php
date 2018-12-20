@@ -5,13 +5,13 @@
   <form class="newPublication" action="" method="post" enctype="multipart/form-data">
     @csrf
 
-    <h2 style="text-align:center">Create Publication</h2>
+    <h2 style="text-align:center">Crea tu publicación</h2>
 
     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
         <div class="form-group row">
-            <label for="title" class="col-md-4 col-form-label text-md-right"><strong>Title</strong></label>
+            <label for="title" class="col-md-4 col-form-label text-md-right"><strong>Título</strong></label>
 
             <div class="col-md-6">
                 <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ old('title') }}" required autofocus>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group row">
-          <label for="province" class="col-md-4 col-form-label text-md-right"><strong>Location</strong></label>
+          <label for="province" class="col-md-4 col-form-label text-md-right"><strong>Localidad</strong></label>
 
           <div class="col-md-6">
             <select id="province" class="form-control{{ $errors->has('province') ? ' is-invalid' : '' }}" name="location" required>
@@ -41,7 +41,7 @@
         </div>
 
         <div class="form-group row">
-          <label for="picture" class="col-md-4 col-form-label text-md-right"><strong>Picture</strong></label>
+          <label for="picture" class="col-md-4 col-form-label text-md-right"><strong>Imágen</strong></label>
 
           <div class="col-md-6">
             <input id="picture" type="file" class="form-control{{ $errors->has('picture') ? ' is-invalid' : '' }}" name="picture" value="{{ old('picture') }}" required autofocus>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="garageType" class="col-md-4 col-form-label text-md-right"><strong>Garage Type</strong></label>
+            <label for="garageType" class="col-md-4 col-form-label text-md-right"><strong>Tipo de garage</strong></label>
 
             <div class="col-md-6">
               <select id="garageType" class="form-control{{ $errors->has('garageType') ? ' is-invalid' : '' }}" name="garageType" required>
@@ -74,7 +74,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="description" class="col-md-4 col-form-label text-md-right">Description</label>
+            <label for="description" class="col-md-4 col-form-label text-md-right">Descripción</label>
 
             <div class="col-md-6">
                 <textarea class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" id="description" rows="8" cols="80" value="{{ old('description') }}"></textarea>
@@ -90,7 +90,7 @@
 
 
         <div class="form-group row">
-            <label for="rentFormat" class="col-md-4 col-form-label text-md-right"><strong>Rent Format</strong></label>
+            <label for="rentFormat" class="col-md-4 col-form-label text-md-right"><strong>Alojamiento</strong></label>
 
             <div class="col-md-6">
               <select id="rentFormat" class="form-control{{ $errors->has('rentFormat') ? ' is-invalid' : '' }}" name="rentFormat" required>
@@ -109,10 +109,10 @@
         </div>
 
         <div class="form-group row">
-            <label for="price" class="col-md-4 col-form-label text-md-right"><strong>Price</strong></label>
+            <label for="price" class="col-md-4 col-form-label text-md-right"><strong>Precio</strong></label>
 
             <div class="col-md-6">
-                <input id="price" type="number" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" name="price" value="{{ old('price') }}" required autofocus>
+                <span>$ <input id="price" type="number" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" name="price" value="{{ old('price') }}" required autofocus></span>
 
                 @if ($errors->has('price'))
                     <span class="invalid-feedback" role="alert">
@@ -125,7 +125,7 @@
         <div class="form-group row mb-0">
             <div class="col-md-6 offset-md-4">
                 <button type="submit" class="btn btn-primary">
-                    {{ __('Register') }}
+                    Crear
                 </button>
             </div>
         </div>

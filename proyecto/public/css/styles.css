@@ -279,3 +279,8 @@ body.night .list-group-item{
   position: absolute;
   bottom: 0;
 }
+
+#price {
+  width: 90%;
+  display: inline-block;
+}

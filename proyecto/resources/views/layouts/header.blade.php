@@ -35,6 +35,7 @@
         @auth
           <a class="navBarA" href="/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><li class="navBarLiR">Salir</li></a>
           <a class="navBarA" href="/profile"><li class="navBarLiR">Perfil</li></a>
+          <a class="navBarA" href="/newPublication"><li class="navBarLiR">Crear publicación</li></a>
 
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               @csrf
