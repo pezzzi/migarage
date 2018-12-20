@@ -46,7 +46,7 @@ class PublicationController extends Controller
       ]);
 
       if( ($request->file('picture')) ){
-          $path = $request->file('picture')->store('garagePics');
+          $path = $request->file('picture')->store('public/garagePics');
       }
 
       $publication = Publication::create([
