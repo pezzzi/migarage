@@ -1,4 +1,4 @@
-<div class="row justify-content-center marginRight">
+<div class="row justify-content-center marginRight" id="footerBar">
   <div class="col-8 col-md-9 col-lg-9">
     <br>
     <p style="color:white">Mi Garage 2018™-Todos los derechos reservados</p
@@ -17,8 +17,9 @@
 
    const setTheme = (theme) => {
        $("body").removeClass('night');
-       if (theme === 'night') $("body").addClass('night');
+       if (theme === 'night'){ $("body").addClass('night');
        localStorage.setItem('theme', theme);
+     }
    };
 
    $themeSelector.val('day');

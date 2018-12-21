@@ -14,19 +14,13 @@
                 <option disabled selected value>--Provincia--</option>
               </select>
 
-              {{-- <select class="selectFilter" name="localidades">
-                <option disabled selected value>--Localidad--</option>
-                <option value="laPlata">La Plata
-                <option value="CABA">CABA
-              </select> --}}
-
               <label class="navBarRadio white">
                 <p class="formP">Tipo de vehiculo</p>
-                <input  type="checkbox" id="auto" name="vehicle" value="auto">
+                <input  type="checkbox" id="auto" name="vehicle" value="Auto">
                 <label class="pointer" for="auto">Auto</label>
-                <input type="checkbox" id="camion" name="vehicle" value="camion">
+                <input type="checkbox" id="camion" name="vehicle" value="Camion">
                 <label class="pointer" for="camion">Camion</label>
-                <input type="checkbox" id="camioneta" name="vehicle" value="camioneta">
+                <input type="checkbox" id="camioneta" name="vehicle" value="Camioneta">
                 <label class="pointer" for="camioneta">Camioneta</label>
                 <input type="checkbox" id="moto" name="vehicle" value="moto">
                 <label class="pointer" for="moto">Moto</label>
@@ -35,11 +29,11 @@
 
               <label class="white">
               <p class="formP white">Estadia</p>
-                <input type="radio" id="dia" name="stay" value="daily">
+                <input type="radio" id="dia" name="stay" value="Diario">
                 <label class="pointer" for="dia">Dia</label>
-                <input type="radio" id="semana" name="stay" value="weekly">
+                <input type="radio" id="semana" name="stay" value="Semanal">
                 <label class="pointer" for="semana">Semana</label>
-                <input type="radio" id="mes" name="stay" value="monthly">
+                <input type="radio" id="mes" name="stay" value="Mensual">
                 <label class="pointer" for="mes">Mes</label>
               </label>
               <br>

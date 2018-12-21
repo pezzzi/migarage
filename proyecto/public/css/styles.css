@@ -35,6 +35,10 @@ body{
   margin: 0;
   padding-left:  5px;
 }
+
+.navBarUl {
+  background-color: black;
+}
 .navBarLiL{
   padding: 10px;
   text-align: center;
@@ -232,9 +236,10 @@ h2{
 body.night,
 body.night .card,
 body.night .list-group-item{
-  background: black;
+  background: #292d33;
   color: white;
 }
+
 
 body.night .card,
 body.night .list-group-item{

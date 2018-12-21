@@ -60,9 +60,9 @@
             <div class="col-md-6">
               <select id="garageType" class="form-control{{ $errors->has('garageType') ? ' is-invalid' : '' }}" name="garageType" required>
                 <option selected disabled hidden>Select your Garage Type</option>
-                <option value="auto">Auto</option>
-                <option value="moto">Moto</option>
-                <option value="camion">Camión</option>
+                <option value="Auto">Auto</option>
+                <option value="Moto">Moto</option>
+                <option value="Camion">Camión</option>
               </select>
 
                 @if ($errors->has('garageType'))
@@ -90,14 +90,14 @@
 
 
         <div class="form-group row">
-            <label for="rentFormat" class="col-md-4 col-form-label text-md-right"><strong>Alojamiento</strong></label>
+            <label for="rentFormat" class="col-md-4 col-form-label text-md-right"><strong>Estadía</strong></label>
 
             <div class="col-md-6">
               <select id="rentFormat" class="form-control{{ $errors->has('rentFormat') ? ' is-invalid' : '' }}" name="rentFormat" required>
                 <option selected disabled hidden>Select your Rent Format</option>
-                <option value="daily">Diario</option>
-                <option value="weekly">Semanal</option>
-                <option value="monthly">Mensual</option>
+                <option value="Diario">Diario</option>
+                <option value="Semanal">Semanal</option>
+                <option value="Mensual">Mensual</option>
               </select>
 
                 @if ($errors->has('rentFormat'))
@@ -141,7 +141,8 @@
   .then(function(data) {
     var provinceSelect = document.querySelector('#province');
     data.forEach(function(item) {
-      provinceSelect.innerHTML += '<option value='+item['state']+'>'+item['state']+'</option>';
+      state = item['state'];
+      provinceSelect.innerHTML += "<option value='"+state+"'>"+state+"</option>";
     });
   })
   .catch(function(error) {

@@ -20,7 +20,7 @@
       </div>
 
       <div class="form-group row">
-        <label for="province" class="col-md-4 col-form-label text-md-right"><strong>Location</strong></label>
+        <label for="province" class="col-md-4 col-form-label text-md-right"><strong>Localidad</strong></label>
 
         <div class="col-md-6">
           <select id="province" class="form-control{{ $errors->has('province') ? ' is-invalid' : '' }}" name="location" required value="{{ $item[0]->location }}">
@@ -36,7 +36,7 @@
       </div>
 
       <div class="form-group row">
-        <label for="picture" class="col-md-4 col-form-label text-md-right"><strong>Picture</strong></label>
+        <label for="picture" class="col-md-4 col-form-label text-md-right"><strong>Imágen</strong></label>
 
         <div class="col-md-6">
           <input id="picture" type="file" class="form-control{{ $errors->has('picture') ? ' is-invalid' : '' }}" name="picture" required autofocus>
@@ -50,14 +50,14 @@
       </div>
 
       <div class="form-group row">
-          <label for="garageType" class="col-md-4 col-form-label text-md-right"><strong>Garage Type</strong></label>
+          <label for="garageType" class="col-md-4 col-form-label text-md-right"><strong>Tipo de garage</strong></label>
 
           <div class="col-md-6">
             <select id="garageType" class="form-control{{ $errors->has('garageType') ? ' is-invalid' : '' }}" name="garageType" required>
               <option disabled hidden>Select your Garage Type</option>
-              <option value="auto">Auto</option>
-              <option value="moto">Moto</option>
-              <option value="camion">Camión</option>
+              <option value="Auto">Auto</option>
+              <option value="Moto">Moto</option>
+              <option value="Camion">Camión</option>
             </select>
 
               @if ($errors->has('garageType'))
@@ -69,7 +69,7 @@
       </div>
 
       <div class="form-group row">
-          <label for="description" class="col-md-4 col-form-label text-md-right">Description</label>
+          <label for="description" class="col-md-4 col-form-label text-md-right">Descripción</label>
 
           <div class="col-md-6">
               <textarea class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" id="description" rows="8" cols="80">{{ $item[0]->description }}</textarea>
@@ -85,14 +85,14 @@
 
 
       <div class="form-group row">
-          <label for="rentFormat" class="col-md-4 col-form-label text-md-right"><strong>Rent Format</strong></label>
+          <label for="rentFormat" class="col-md-4 col-form-label text-md-right"><strong>Estadía</strong></label>
 
           <div class="col-md-6">
             <select id="rentFormat" class="form-control{{ $errors->has('rentFormat') ? ' is-invalid' : '' }}" name="rentFormat" required value="{{ $item[0]->rentFormat }}">
               <option disabled hidden>Select your Rent Format</option>
-              <option value="daily">Diario</option>
-              <option value="weekly">Semanal</option>
-              <option value="monthly">Mensual</option>
+              <option value="Diario">Diario</option>
+              <option value="Semanal">Semanal</option>
+              <option value="Mensual">Mensual</option>
             </select>
 
               @if ($errors->has('rentFormat'))
@@ -104,7 +104,7 @@
       </div>
 
       <div class="form-group row">
-          <label for="price" class="col-md-4 col-form-label text-md-right"><strong>Price</strong></label>
+          <label for="price" class="col-md-4 col-form-label text-md-right"><strong>Precio</strong></label>
 
           <div class="col-md-6">
               <input id="price" type="number" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" name="price" value="{{ $item[0]->price }}" required autofocus>
@@ -120,7 +120,7 @@
       <div class="form-group row mb-0">
           <div class="col-md-6 offset-md-4">
               <button type="submit" class="btn btn-primary">
-                  Edit publication
+                  Editar publicación
               </button>
           </div>
       </div>
