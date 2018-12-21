@@ -2,7 +2,7 @@
 
 @section('content')
 <div class='container'>
-    <img style='margin-top:50px; border-radius: 50%; overflow:hidden;display: block; margin-left: auto; margin-right: auto; width: 150px;' src="{{Storage::url($avatar)}}" alt="" id="profileAvatar">
+    <img style='margin-top:50px; border-radius: 50%; overflow:hidden;display: block; margin-left: auto; margin-right: auto; width: 150px; height:150px;' src="{{Storage::url($avatar)}}" alt="" id="profileAvatar">
     <h2 style='margin-top: 20px; text-align:center;'>{{$fullname}}</h2>
     <div class="wrapper" style="text-align:center;">
       <div class="" style="display:inline-block;">
