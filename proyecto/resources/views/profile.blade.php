@@ -11,8 +11,6 @@
     <p>{{$email}}</p>
     <p>{{$country_code}}</p>
 
-    <p>{{$avatar}}</p>
-
     Theme: <select class="custom-select mr-sm-2" id="theme-selector">
        <option selected>Seleccionar...</option>
        <option value="day">Day</option>
